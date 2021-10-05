@@ -19,6 +19,11 @@ public class UserInput {
 
             return userAttempts ;
         }
+        public int UserGuess(){
+        Scanner userGuess = new Scanner(System.in);
+            int usershoot = userGuess.nextInt();
+            return usershoot;
+        }
 
 
 
