@@ -4,50 +4,53 @@ import java.util.Random;
 
 
 public class GuessGame {
-    public int size = new UserInput().UserSize();
-    private int attempts = new UserInput().UserAttempts();
+    public int size = new UserInput().userSize();
+    private int attempts = new UserInput().userAttempts();
     private int shoot;
     private Random RNG = new Random();
     int win = RNG.nextInt(size);
-    int userWin = 0;
-    public void StartGame() {
+    boolean userWin = false;
+
+    public void startGame() {
         System.out.println("pierwszy strzal");
 
         for (int x = 1; x <= attempts; x++) {
-            UserShoots();
-            if (userWin == 1) {
+            userShoots();
+            if (userWin == true) {
                 break;
             }
         }
-        if (userWin == 0){
-            LoseScreen();
+        if (userWin == false) {
+            loseScreen();
         }
 
 
     }
-    private void UserShoots(){
-        shoot = new UserInput().UserGuess();
+
+    private void userShoots() {
+        shoot = new UserInput().userGuess();
         if ((shoot == win)) {
             System.out.println("You win");
-            userWin=1;
+            userWin = true;
 
         } else {
-            UpOrDown();
+            upOrDown();
 
         }
 
     }
-    private void UpOrDown(){
+
+    private void upOrDown() {
 
         if (shoot > win) {
             System.out.println("nizej");
 
-        }
-        else {
+        } else {
             System.out.println("wyzej");
         }
     }
-    private void LoseScreen(){
+
+    private void loseScreen() {
         System.out.println("What a looser!!! ");
     }
 

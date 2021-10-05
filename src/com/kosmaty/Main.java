@@ -2,13 +2,13 @@ package com.kosmaty;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         GuessGame newGame = new GuessGame();
         LeaveOrPlay leaveOrPlay = new LeaveOrPlay();
 
-          newGame.StartGame();
-             leaveOrPlay.Choose();
+        newGame.startGame();
+        leaveOrPlay.Choose();
 
     }
 }
