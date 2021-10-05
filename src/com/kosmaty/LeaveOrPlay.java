@@ -1,7 +1,7 @@
 package com.kosmaty;
 
 public class LeaveOrPlay {
-    public void Choose() {
+    public void choose() {
 
 
         if (true) {
@@ -13,7 +13,7 @@ public class LeaveOrPlay {
             if (yesOrNo.equals("Y")) {
                 GuessGame newGame = new GuessGame();
                 newGame.startGame();
-                Choose();
+                choose();
             } else {
                 System.exit(0);
 

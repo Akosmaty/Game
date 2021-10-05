@@ -8,7 +8,7 @@ public class Main {
         LeaveOrPlay leaveOrPlay = new LeaveOrPlay();
 
         newGame.startGame();
-        leaveOrPlay.Choose();
+        leaveOrPlay.choose();
 
     }
 }
