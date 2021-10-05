@@ -1,23 +1,27 @@
 package com.kosmaty;
 
 import java.util.Random;
-import java.util.Scanner;
+
 
 public class GuessGame {
     public int size = new UserInput().UserSize();
     private int attempts = new UserInput().UserAttempts();
-    Scanner userGuess = new Scanner(System.in);
     private int shoot;
     private Random RNG = new Random();
     int win = RNG.nextInt(size);
-
+    int userWin = 0;
     public void StartGame() {
         System.out.println("pierwszy strzal");
 
         for (int x = 1; x <= attempts; x++) {
-        UserShoots();
+            UserShoots();
+            if (userWin == 1) {
+                break;
+            }
         }
-        LoosScreen();
+        if (userWin == 0){
+            LoseScreen();
+        }
 
 
     }
@@ -25,7 +29,8 @@ public class GuessGame {
         shoot = new UserInput().UserGuess();
         if ((shoot == win)) {
             System.out.println("You win");
-            System.exit(0);
+            userWin=1;
+
         } else {
             UpOrDown();
 
@@ -42,7 +47,7 @@ public class GuessGame {
             System.out.println("wyzej");
         }
     }
-    private void LoosScreen(){
+    private void LoseScreen(){
         System.out.println("What a looser!!! ");
     }
 
