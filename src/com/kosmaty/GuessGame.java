@@ -8,18 +8,17 @@ public class GuessGame {
     private int attempts = new UserInput().UserAttempts();
     Scanner userGuess = new Scanner(System.in);
     private int shoot;
-
     private Random RNG = new Random();
-
     int win = RNG.nextInt(size);
+
     public void StartGame() {
         System.out.println("pierwszy strzal");
 
         for (int x = 1; x <= attempts; x++) {
         UserShoots();
-
         }
-    System.out.println("przegryw");
+        LoosScreen();
+
 
     }
     private void UserShoots(){
@@ -31,9 +30,10 @@ public class GuessGame {
             UpOrDown();
 
         }
+
     }
     private void UpOrDown(){
-        System.out.println("Strzelaj dalej");
+
         if (shoot > win) {
             System.out.println("nizej");
 
@@ -42,6 +42,10 @@ public class GuessGame {
             System.out.println("wyzej");
         }
     }
+    private void LoosScreen(){
+        System.out.println("What a looser!!! ");
+    }
+
 }
 
 
