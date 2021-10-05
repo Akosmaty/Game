@@ -4,11 +4,11 @@ import java.util.Random;
 
 
 public class GuessGame {
-    public int size = new UserInput().userSize();
-    private int attempts = new UserInput().userAttempts();
+    public final int size = new UserInput().userSize();
+    private final int attempts = new UserInput().userAttempts();
     private int shoot;
-    private Random RNG = new Random();
-    int win = RNG.nextInt(size);
+    private final Random RNG = new Random();
+    final int win = RNG.nextInt(size);
     boolean userWin = false;
 
     public void startGame() {
@@ -16,11 +16,11 @@ public class GuessGame {
 
         for (int x = 1; x <= attempts; x++) {
             userShoots();
-            if (userWin == true) {
+            if (userWin) {
                 break;
             }
         }
-        if (userWin == false) {
+        if (!userWin) {
             loseScreen();
         }
 

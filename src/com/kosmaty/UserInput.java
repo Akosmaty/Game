@@ -7,29 +7,24 @@ public class UserInput {
         Scanner userinp = new Scanner(System.in);
 
         System.out.println("Jaka duzy zakres liczb chcesz uzyć");
-        int userSize = userinp.nextInt();
-        return userSize;
+        return userinp.nextInt();
     }
 
     public int userAttempts() {
         Scanner userinp = new Scanner(System.in);
         System.out.println("Ile podjeść potrzebujesz");
 
-        int userAttempts = userinp.nextInt();
-
-        return userAttempts;
+        return userinp.nextInt();
     }
 
     public int userGuess() {
         Scanner userGuess = new Scanner(System.in);
-        int usershoot = userGuess.nextInt();
-        return usershoot;
+        return userGuess.nextInt();
     }
 
     public String userEndGameChoos() {
         Scanner userChoos = new Scanner(System.in);
-        String yesOrNo = userChoos.nextLine();
-        return yesOrNo;
+        return userChoos.nextLine();
     }
 
 
