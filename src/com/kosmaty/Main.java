@@ -4,11 +4,11 @@ public class Main {
 
     public static void main(String[] args){
 
+        GuessGame newGame = new GuessGame();
+        LeaveOrPlay leaveOrPlay = new LeaveOrPlay();
 
-
-    GuessGame newGame = new GuessGame();
-    newGame.StartGame();
-
+          newGame.StartGame();
+             leaveOrPlay.Choose();
 
     }
 }

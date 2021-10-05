@@ -25,7 +25,11 @@ public class UserInput {
             return usershoot;
         }
 
-
+        public String UserEndGameChoos(){
+        Scanner userChoos = new Scanner(System.in);
+            String yesOrNo = userChoos.nextLine();
+            return yesOrNo;
+        }
 
 
 }
